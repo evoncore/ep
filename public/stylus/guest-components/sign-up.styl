@@ -1,0 +1,33 @@
+
+.form
+  input, button
+    border 0
+    background #333
+    width 100%
+    display block
+    padding 10px 15px
+    padding-bottom 8px
+    margin-top 20px
+    color #fff
+    fonts(16px)
+    bs_pattern(#333)
+  input
+    &::-webkit-input-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &::-moz-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &:-moz-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &:-ms-input-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+  button
+    color ($mfc / 2)
+    transition()
+    &:hover
+      color $mfc
+    &:active
+      bs_pattern_negative(#333)

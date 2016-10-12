@@ -1,0 +1,111 @@
+
+#message-list
+  overflow-y hidden
+  position relative
+  height 100%
+
+.message-item
+  position relative
+  background #333
+  bs_pattern(#333)
+  color $mfc
+  padding 7px 15px
+  margin-top 10px
+  &:first-child
+    margin-top 0
+  &:hover .delete-item
+    opacity 1
+  &:first-child
+    padding-top 7px
+  .small-button
+    position absolute
+    display block
+    color $mfc
+    font-size 10px
+    text-align center
+    font-family $if
+    transition()
+    &:hover
+      color $mc
+      cursor pointer
+    &:active
+      transform: rotate(90deg)
+  .delete-item
+    top 7px
+    right 14px
+    ts_pattern($mfc)
+    opacity 0
+    &:hover
+      ts_pattern($mc)
+  .message-user-name
+    margin-top 0
+    font-weight 400
+    letter-spacing 1px
+    margin-bottom 5px
+    font-size 18px
+    color $mc
+  p
+    font-size 16px
+    margin-bottom 0
+    
+$themeBackgroundColor = #333 // $mbc
+$themeFontColor = $mfc // #333
+#addMessage
+  max-width 100%
+  position relative
+  input, textarea
+    border 0
+    background #333
+    color $mfc
+    border-bottom 0
+    transition()
+    bs_pattern(#333)
+    &::-webkit-input-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &::-moz-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &:-moz-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &:-ms-input-placeholder
+      color ($themeFontColor / 2)
+      fonts(16px)
+    &:focus
+      background $themeBackgroundColor
+      color $themeFontColor
+      bs_pattern($themeBackgroundColor)
+  textarea
+    display block
+    padding 10px 15px
+    resize none
+    height 44px
+    width 100%
+    margin-top 20px
+    fonts(16px)
+  input
+    width 100%
+    display block
+    padding 10px 15px
+    padding-bottom 8px
+    margin-top 20px
+    fonts(16px)
+  .send
+    position absolute
+    margin-top: 0
+    right 0
+    bottom 7px
+    font-family $if
+    padding 5px 10px
+    background transparent
+    box-shadow none
+    opacity 0
+    transition()
+    ts_pattern($mfc)
+    &:active
+      right -3px
+    &:hover
+      ts_pattern($mc)
+    &.show
+      opacity 1

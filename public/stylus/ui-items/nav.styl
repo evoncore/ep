@@ -1,0 +1,86 @@
+
+#message-counter
+  position: absolute
+  top 5px
+  right 5px
+  color $mc
+
+#context-menu
+  opacity 0
+  height 0
+  position absolute
+  text-align center
+  z-index -1
+  left -64px
+  top 0
+  height 100%
+  text-align center
+  ul
+    position fixed
+    box-shadow: 0 0 3px rgba(0,0,0,.3),
+                0 1px 0 (#333 / 1.5),
+                0 2px 0 (#333 / 1.5)
+    & .before
+      content ''
+      display block
+      position absolute
+      left -3px
+      width 3px
+      height 52px
+      z-index 2
+      background $mc
+      transition .3s
+      bs_pattern($mc)
+    li
+      display block
+    a
+      display block
+      background #333
+      color $mfc
+      padding 15px 18px
+      transition()
+      position relative
+      //&.active
+      //  color $mc
+      //  &:before
+      //    ts_pattern($mc)
+      &:before
+        font-size 16px
+        text-shadow: 0 1px 0 #888, 
+                     0 2px 0 #777
+      &:hover
+        color $mc
+        &:before
+          ts_pattern($mc)
+        i
+          opacity 1
+          color $mfc
+      i
+        display inline-block
+        font-style normal
+        position absolute
+        background #555
+        padding 16px
+        top 0
+        left 57px
+        display none
+        opacity 0
+        letter-spacing 1px
+        font-family $mf, $af
+        max-width 120px
+        bs_pattern(#555)
+        &.align-left
+          right 57px
+          left auto
+        &.align-right
+          left 57px
+          right auto
+  &.show
+    opacity 1
+    z-index 9998
+    height auto
+    
+    
+@media screen and (max-width 1440px)
+  #context-menu
+   left -54px

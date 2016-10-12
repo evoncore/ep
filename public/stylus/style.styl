@@ -1,0 +1,79 @@
+
+// Reset
+
+*
+  outline none
+
+ul
+  padding 0
+  margin 0
+  list-style none
+
+a
+  &:hover, &:active, &:focus
+    text-decoration none
+
+// End Reset
+
+
+// Main Settings
+
+*
+  outline none
+
+html, body
+  min-height 100%
+
+body
+  background url('../img/black-orchid.png'), #111
+  font-family $mf
+
+h1
+  color #222
+  font-family $mf
+  &.title
+    text-transform uppercase
+    margin-top 0
+    margin-bottom 20px
+    color #333
+    font-weight 700
+    letter-spacing 5px
+
+p
+  fonts(15px)
+  color $mfc
+
+.container
+  padding 40px
+  background #222
+  position relative
+  bs_pattern(#222)
+
+.icon
+  font-family $if
+
+button
+  border 0
+  background #333
+  color $mfc
+  padding 10px 15px
+  transition()
+  bs_pattern(#333)
+  font-size 16px
+  margin-top 20px
+  &:hover
+    color $mc
+  &:active
+    bs_pattern_negative(#333)
+    
+
+// Root
+
+#root
+  height 100%
+  padding-top 40px
+  & > *
+    min-height 100%
+
+#app
+  overflow-y hidden

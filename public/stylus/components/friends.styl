@@ -1,0 +1,109 @@
+
+#friend-list
+  overflow-y hidden
+  position relative
+  height 100
+
+#friend-list-search
+  width 100%
+  border 0
+  background #333
+  margin-top 20px
+  height 44px
+  padding 10px 15px
+  font-size 16px
+  color $mfc
+  bs_pattern(#333)
+  &::-webkit-input-placeholder
+    color ($themeFontColor / 2)
+    fonts(16px)
+  &::-moz-placeholder
+    color ($themeFontColor / 2)
+    fonts(16px)
+  &:-moz-placeholder
+    color ($themeFontColor / 2)
+    fonts(16px)
+  &:-ms-input-placeholder
+    color ($themeFontColor / 2)
+    fonts(16px)
+
+.friend-item
+  position relative
+  background #333
+  bs_pattern(#333)
+  color $mfc
+  margin-top 10px
+  &:first-child
+    margin-top 0
+  &.active
+    background #555
+    position: relative
+    .friend-name
+      color #222
+    .friend-icon
+      border-color $mc
+  &:hover
+    cursor pointer
+  &:hover .delete-icon
+    opacity 0 // 1
+  &:hover .dialog-icon
+    opacity 0 // 1
+  &:hover .profile-icon
+    opacity 0 // 1
+  .small-button
+    position absolute
+    display block
+    color $mfc
+    font-size 16px
+    text-align center
+    font-family $if
+    position absolute
+    transition()
+    ts_pattern($mfc)
+    opacity 0
+    &:hover
+      ts_pattern($mc)
+      color $mc
+      cursor pointer
+  .delete-icon
+    top 8px
+    right 10px
+    &:hover
+      color $mnc
+      ts_pattern($mnc)
+  .dialog-icon
+    top 8px
+    right 40px
+  .profile-icon
+    top 8px
+    right 72px
+  &.offline
+    .friend-name
+      color #666
+    .friend-icon
+      border-color #666
+  &.online
+    .friend-name
+      color $sc
+    .friend-icon
+      border-color $sc
+  &.playing
+    .friend-name
+      color $mc
+    .friend-icon
+      border-color $mc
+  .friend-name
+    display inline-block
+    font-weight 400
+    letter-spacing 1px
+    font-size 16px
+    line-height 35px
+    vertical-align -1px
+    color #666
+    margin-left 15px
+  .friend-icon
+    width 44px
+    height 44px
+  p
+    font-size 16px
+    margin-bottom 0
